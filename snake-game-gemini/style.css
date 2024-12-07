@@ -1,0 +1,116 @@
+body {
+    background-color: #333;
+    color: #eee;
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+    /* Remove default margin to use full viewport */
+}
+
+#gameContainer {
+    position: relative;
+    /* For overlay positioning */
+    width: 100%;
+    /* Take full width of the viewport */
+    max-width: 400px;
+    /* Keep a maximum width */
+    margin: 0 auto;
+    /* height will be determined dynamically by JavaScript */
+}
+
+#gameCanvas {
+    background-color: #000;
+    border: 2px solid #eee;
+    width: 100%;
+    /* Canvas takes full width of its container */
+    /* height will be set to the same value as width in JavaScript */
+}
+
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#score {
+    font-size: 20px;
+}
+
+/* Overlay Styles */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Now takes width of the canvas */
+    height: 100%;
+    /* Now takes height of the canvas */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black */
+    display: none;
+    /* Initially hidden */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+}
+
+#finalScore {
+    margin-bottom: 10px;
+}
+
+#gameOverText {
+    margin-bottom: 10px;
+}
+
+/* Replay Button Styles */
+#replayButton {
+    background-color: #4CAF50;
+    /* Green */
+    border: 2px solid #eee;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    /* Rounded edges */
+    cursor: pointer;
+}
+
+/* Pause Button Styles */
+#pauseButton {
+    background-color: #4CAF50;
+    /* Green */
+    border: 2px solid #eee;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    /* Rounded edges */
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    #score {
+        font-size: 16px;
+    }
+
+    #pauseButton,
+    #replayButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
